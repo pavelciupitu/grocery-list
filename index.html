@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/5495b2a6bd.js" crossorigin="anonymous"></script>
+    <title>Grocery List</title>
+</head>
+<body>
+    <!-- Adding Items -->
+    <div class="addItems-container container">
+            <h4 class="displayAction">display action</h4>
+            <h3 class="addGroceryItems">add Grocery Items</h3>
+            <form>
+                <input type="text" class="text-input"> 
+                <button class="buttonAdd">Add item</button>
+            </form>
+    </div>
+
+    <!-- Display items -->
+    <div class="displayItems-container container">
+        <h4 class="displayItems">grocery items</h4>
+        <h3 class="groceryItems">Grocery Items</h3>
+        <div class="grocery-list">
+    <!-- Start Grocery item-->
+            <div class="grocery-item">
+                <h4 class="grocery-item__title">Test item</h4>
+                <a href="#" class="grocery-item__delete"><i class="far fa-trash-alt"></i></a>
+            </div>
+    </div>
+    <!-- End Grocery item -->
+        <button class="clearAll">Clear All Items</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

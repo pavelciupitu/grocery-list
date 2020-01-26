@@ -1,0 +1,83 @@
+* {
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    text-transform: capitalize;
+}
+
+body {
+    background: silver;
+    display: grid;
+    grid-template-columns: 80%;
+    justify-content: center;
+    margin-top: 5rem;
+}
+
+.container {
+    padding: 1rem;
+    margin: 1rem;
+    border: 2px solid #6d6d6d;
+    background: #9e9e9eb0;
+    border-radius: 1rem;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1.5rem;
+}
+
+.displayAction, .displayItems {
+    background: rgb(230, 198, 198);
+    border: 2px solid lightcoral;
+    border-radius: 1rem;
+    display:none;
+}
+
+.text-input, button {
+    margin: 0.5rem;
+    background: none;
+    border: 2px solid #6d6d6d;
+    border-radius: 1rem;
+    padding: 5px;
+    font-size: 1.5rem;
+    background: #9393b3
+}
+.text-input {
+    width: 100%;
+}
+
+.grocery-item {
+    display:grid;
+    grid-template-columns: 4fr 1fr;
+    border-top: 2px solid #6d6d6d;
+    border-bottom: 2px solid #6d6d6d;
+    transition: all 1s ease-in-out;
+}
+
+.grocery-item:hover {
+    background: #9393b3;
+}
+
+.grocery-item__title {
+    text-align: left;
+}
+
+.alert {
+    color:red;
+    border-color:red;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.success {
+    color:green;
+    border-color:green;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+@media screen and (min-width:768px) {
+    body {
+        grid-template-columns: 50%;
+    }
+}
