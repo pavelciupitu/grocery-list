@@ -13,8 +13,8 @@ const clear = document.querySelector('.clearAll');
 
 submit.addEventListener('click', addItem);
 document.addEventListener('DOMContentLoaded', displayStorage);
-clear.addEventListener('click', clearAll)
-
+clear.addEventListener('click', clearAll);
+list.addEventListener('click', removeSingleItem);
 //clear.addEventListener('click', clear);
 //functions
 
@@ -105,5 +105,25 @@ if (items.length >0) {
         list.removeChild(element);
     })
 }
-else showAction(displayItemsAction, 'No more items to delete', true)
+else {
+    showAction(displayItemsAction, 'No more items to delete', true)
+}
+}
+
+//! remove single item
+
+function removeSingleItem() {
+    event.preventDefault();
+    
+    let link = event.target.parentElement;
+    if (link.classList.contains('grocery-item__delete')) {
+        let text = link.previousElementSibling.innerHTML;
+        let groceryItem = event.target.parentElement.parentElement;
+        // remove from the list
+        
+        list.removeChild(groceryItem);
+        showAction(displayItemsAction, `${text} has been deleted from the list`, true)
+        
+        //remove from the local storage
+    }
 }
